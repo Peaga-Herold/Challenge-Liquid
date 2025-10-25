@@ -1,0 +1,16 @@
+service: liquid-imobiliaria
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: python3.9
+  region: sa-east-1
+  stage: dev
+
+functions:
+  obterPrecoMedio:
+    handler: handler.main
+    events:
+      - httpApi:
+          path: /precos
+          method: get
