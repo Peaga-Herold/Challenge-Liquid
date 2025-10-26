@@ -1,5 +1,8 @@
+
 import random
 
-def preco_medio_m2():
-    data = round(random.uniform(4000, 12000), 2)
-    return data
+
+def gerar_preco_m2_ficticio(min_val: float = 4000.0, max_val: float = 12000.0) -> float:
+    """ Gera um preço médio do metro quadrado (m²) fictício. """
+    return round(random.uniform(min_val, max_val), 2)
+

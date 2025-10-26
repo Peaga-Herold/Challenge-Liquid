@@ -1,5 +1,9 @@
-service: liquid-imobiliaria
-frameworkVersion: "3"
+service: sls-liquid-imobiliaria
+frameworkVersion: "4"
+
+custom: 
+  pythonRequirements:
+    dockerizePip: false
 
 provider:
   name: aws

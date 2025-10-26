@@ -1,0 +1,14 @@
+#python
+__pycache__/
+.pytest_cache
+
+# Frontend (Node/React/Vite)
+frontend/node_modules
+
+# Pastas de build geradas pelo Vite/Webpack
+frontend/dist
+frontend/build
+
+# Serverless Framework
+.serverless/
+.aws-sam/
