@@ -13,14 +13,11 @@ def calcular_parcela_financiamento_sac(valor_imovel: float, taxa_anual: float, a
     meses = anos * 12
     taxa_mensal = (taxa_anual / 100) / 12
     
-    # Amortização é constante no sistema SAC
     amortizacao_mensal = round(valor_imovel / meses, 2)
     
-    # Simula a primeira e a última parcela (mais fácil de retornar)
     juros_primeira_parcela = round(valor_imovel * taxa_mensal, 2)
     primeira_parcela = round(amortizacao_mensal + juros_primeira_parcela, 2)
     
-    # O saldo devedor no último mês é a amortização (simplificado)
     juros_ultima_parcela = round(amortizacao_mensal * taxa_mensal, 2)
     ultima_parcela = round(amortizacao_mensal + juros_ultima_parcela, 2)
     
@@ -45,11 +42,10 @@ def gerar_dados_mercado_ficticios(num_registros: int = 5) -> list:
         tamanho_m2 = random.randint(50, 200)
         valor_total = round(preco_m2 * tamanho_m2, 2)
         
-        # Simula o financiamento (operação interessante)
         financiamento = calcular_parcela_financiamento_sac(
             valor_imovel=valor_total,
-            taxa_anual=random.uniform(7.0, 10.0), # Taxa anual aleatória
-            anos=random.choice([15, 20, 25, 30]) # Prazo aleatório
+            taxa_anual=random.uniform(7.0, 10.0),
+            anos=random.choice([15, 20, 25, 30]) 
         )
         
         resultados.append({
