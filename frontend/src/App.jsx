@@ -36,9 +36,9 @@ function App() {
     };
 
     fetchData();
-  }, []); // O array vazio garante que a função só rode uma vez (ao montar o componente)
+  }, []); 
 
-  // --- Lógica de Renderização (Requisitos Nível 1/2) ---
+
 
   if (loading) {
     return <div className="loading">Carregando dados do mercado...</div>;
@@ -48,22 +48,17 @@ function App() {
     return <div className="error-message">Erro: {error}</div>;
   }
   
-  // Se houver dados, exibe a tabela
+
   return (
     <div className="container">
       <div className='title'>
         <h1>Análise de Mercado Imobiliário  </h1>
       <p>Dados simulados consumidos do endpoint AWS Lambda/API Gateway.</p> 
       </div>
-      
-      {/* Grid de Cards - Responsivo */}
       <div className="card-grid">
         {data.map((imovel, index) => (
           <div key={imovel.id_imovel || index} className="imovel-card">
-            
-            {/* Imagem Fictícia (Pode ser um placeholder) */}
             <div className="card-image-placeholder">
-              {/* Ícone ou Imagem de Placeholder para Imóvel */}
               🏠
             </div>
             

@@ -1,10 +1,8 @@
-/* src/App.css */
 
-/* Estilos de Reset Básico */
 body {
   font-family: sans-serif;
   margin: 0;
-  background-color: #f4f7f9; /* Fundo leve */
+  background-color: #f4f7f9;
   color: #333;
 }
 
@@ -33,47 +31,46 @@ text-align: center;
 h1 {
   justify-content: center;
   text-align: center;
-  color: #333; /* Cor primária da Liquid, por exemplo */
+  color: #333; 
   margin-bottom: 30px;
 }
 
-/* --- Layout de Cards Responsivo (GRID) --- */
+
 
 .card-grid {
   display: grid;
-  /* Por padrão, no mobile, os cards se empilham (1 coluna) */
+
   grid-template-columns: 1fr;
-  gap: 25px; /* Espaçamento entre os cards */
+  gap: 25px; 
   padding: 10px;
 }
 
-/* Regra de Mídia (Media Query) para Desktop/Tablet */
+
 @media (min-width: 768px) {
   .card-grid {
-    /* Em telas maiores, 3 colunas (ajusta automaticamente) */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
-/* --- Estilo Individual do Card --- */
+
 
 .imovel-card {
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  overflow: hidden; /* Garante que a imagem fique dentro do card */
+  overflow: hidden; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
 }
 
 .imovel-card:hover {
-  transform: translateY(-5px); /* Efeito sutil ao passar o mouse */
+  transform: translateY(-5px); 
 }
 
-/* Placeholder de Imagem */
+
 .card-image-placeholder {
   height: 180px;
-  background-color: #e6f0ff; /* Cor clara para simular o background da imagem */
+  background-color: #e6f0ff; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,7 +95,6 @@ h1 {
   margin-bottom: 15px;
 }
 
-/* Linha de Informação (para layout vertical/horizontal) */
 .info-row {
   display: flex;
   justify-content: space-between;
@@ -112,7 +108,7 @@ h1 {
 }
 
 .price-highlight {
-  color: #28a745; /* Cor verde para destacar o preço */
+  color: #28a745; 
   font-weight: bold;
   font-size: 1.1em;
 }
@@ -120,9 +116,7 @@ h1 {
 .financiamento-info {
   margin-top: 15px;
   padding: 10px;
-  background-color: #fff3cd; /* Cor de alerta suave */
+  background-color: #fff3cd; 
   border-radius: 4px;
   text-align: center;
 }
-
-/* Fim dos Estilos de Card */
